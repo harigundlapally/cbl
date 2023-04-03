@@ -1,0 +1,23 @@
+{
+  "TRANSLATOR.SELECT": "あなたが使う言語を選んでください",
+  "MENU.NEW": "新しい",
+  
+  "SUBSCRIPTIONS.MANAGE_SUBSCRIPTIONS.TITLE": "All Subscriptions",
+  "SUBSCRIPTIONS.MANAGE_SUBSCRIPTIONS.MANAGE_PRODUCTS_TEXT": "You can manage your products here",
+  "SUBSCRIPTIONS.MANAGE_SUBSCRIPTIONS.VIEW_PRODUCTS_BTN": "Search Product",
+  "SUBSCRIPTIONS.MANAGE_SUBSCRIPTIONS.VIEW_PRODUCTS_DESC": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. ",
+  "SUBSCRIPTIONS.MANAGE_SUBSCRIPTIONS.MANAGE_PLAN_BTN": "Manage Plan",
+  "SUBSCRIPTIONS.ALL_PRODUCTS.TITLE": "All Products",
+  "SUBSCRIPTIONS.ALL_PRODUCTS.ALL_PRODUCTS_TEXT": "We offer our products for you",
+  "SUBSCRIPTIONS.ALL_PRODUCTS.VIEW_PRODUCT_BTN": "Purchase Product",
+  "SUBSCRIPTIONS.PLANS.TITLE": "Choose a plan",
+  "SUBSCRIPTIONS.PLANS.PURCHASE_PLAN_BTN": "Purchase plan",
+  "SUBSCRIPTIONS.ONBOARDING.FORM_TITLE": "Please provide your details",
+  "SUBSCRIPTIONS.ONBOARDING.FORM_BUTTON": "Proceed",
+  "SUBSCRIPTIONS.ONBOARDING.PLEASE_WAIT": "Please wait",
+  "SUBSCRIPTIONS.PAYMENT_SUCCESS.TITLE": "Payment successful",
+  "SUBSCRIPTIONS.PAYMENT_FAILURE.TITLE": "Payment failure",
+  "SUBSCRIPTIONS.CONTINUE_BROWSING": "Continue Browsing",
+  "SUBSCRIPTIONS.SHOW_MORE": "show more",
+  "SUBSCRIPTIONS.SHOW_LESS": "show less"
+}

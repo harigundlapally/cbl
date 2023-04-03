@@ -1,0 +1,79 @@
+:root {
+    --theme-blue: #00A3F1;
+    --theme-green: #83c907;
+    --theme-pink: #E363B0;
+}
+
+html {
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+span,
+p,
+li,
+a,
+button {
+    font-family: 'Alliance', sans-serif !important;
+}
+
+div,
+p,
+li,
+a {
+    font-family: 'Alliance', sans-serif !important;
+}
+
+.heading {
+    font-size: 42px;
+    text-transform: uppercase;
+}
+
+.theme-heading {
+        background-color: transparent;
+        background-image: linear-gradient(90deg, var(--theme-green), var(--theme-blue), var(--theme-pink));
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        display: inline;
+}
+
+.sub-heading {
+    font-size: 16px;
+}
+
+.btn.btn-theme {
+    @include button-custom-variant(
+      $color: $white,
+      $icon-color: null,
+      $border-color: var(--theme-blue) !important,
+      $bg-color: var(--theme-green) !important,
+      $color-active: $white,
+      $icon-color-active: null,
+      $border-color-active: var(--theme-blue),
+      $bg-color-active: var(--theme-blue)
+    );
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &:hover {
+        @include button-custom-variant(
+            $color: $white,
+            $icon-color: null,
+            $border-color: var(--theme-blue) !important,
+            $bg-color: var(--theme-green) !important,
+            $color-active: $white,
+            $icon-color-active: null,
+            $border-color-active: var(--theme-blue),
+            $bg-color-active: var(--theme-blue)
+          ); 
+    }
+}
