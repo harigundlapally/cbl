@@ -6,7 +6,6 @@ import { useIntl } from 'react-intl'
 import Back from '../components/Back'
 import Header from '../components/Header'
 import axios from '../../../api/axios';
-import { KTSVG } from '../components/KTSVG'
 import { Plan } from '../types/plan'
 
 const planPeriod = [
