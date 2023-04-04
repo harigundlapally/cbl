@@ -19,8 +19,8 @@ const Header:FC = () => {
                             Products
                         </NavLink>
                         <NavDropdown id="dropdown-basic-button" title="Category" className='text-gray-400'>
-                            <NavDropdown.Item href="/products?category=all">All</NavDropdown.Item>
-                            <NavDropdown.Item href="/products?category=providers">Providers</NavDropdown.Item>
+                            <NavLink to="/products?category=all" className='d-flex px-6 py-2'>All</NavLink>
+                            <NavLink to="/products?category=providers" className='d-flex px-6 py-2'>Providers</NavLink>
                         </NavDropdown>
                         <NavLink to='/payment-success' className={'text-gray-400'}>
                             Payment Success
