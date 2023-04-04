@@ -1,0 +1,43 @@
+[
+    {
+        "pricing_id": "price_1Mqg45SEJS9SNBYNFMnU5rlJ",
+        "currency": "usd",
+        "description": "Optimal for medium scale company",
+        "feature_list": "Annual Subscription | QSA Consulting - 2 Hours | Attestation by QSA, PCI SAQ Certificate | Filling up of the SAQ Document",
+        "title": "Pro",
+        "product_id": "prod_Nbtrt2jsNF9hup",
+        "type": "recurring",
+        "unit_amount": 79900,
+        "recurring": {
+            "interval": "year",
+            "interval_count": 1,
+            "usage_type": "licensed"
+        }
+    },
+    {
+        "pricing_id": "price_1Mqg45SEJS9SNBYNamblfLUv",
+        "currency": "usd",
+        "description": "Optimal for large scale company",
+        "feature_list": "5 year Subscription | QSA Consulting - 2 Hours | Attestation by QSA, PCI SAQ Certificate | Filling up of the SAQ Document |  SAQ Portal Access for evidence upload",
+        "title": "Enterprise",
+        "product_id": "prod_Nbtrt2jsNF9hup",
+        "type": "one_time",
+        "unit_amount": 199900,
+        "recurring": null
+    },
+    {
+        "pricing_id": "price_1Mqg45SEJS9SNBYNyv3CrorJ",
+        "currency": "usd",
+        "description": "Optimal for small scale company",
+        "feature_list": "Monthly Subscription | QSA Consulting - 2 Hours | Attestation by QSA, PCI SAQ Certificate",
+        "title": "Basic",
+        "product_id": "prod_Nbtrt2jsNF9hup",
+        "type": "recurring",
+        "unit_amount": 9900,
+        "recurring": {
+            "interval": "month",
+            "interval_count": 1,
+            "usage_type": "licensed"
+        }
+    }
+]
