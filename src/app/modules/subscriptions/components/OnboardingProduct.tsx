@@ -4,7 +4,7 @@ import Logo from './Logo'
 
 const OnboardingProduct: FC = () => {
     return (
-        <div className='d-flex flex-column flex-lg-row-fluid w-lg-50 p-20 order-2 order-lg-1'>
+        <div className='d-flex flex-column flex-lg-row-fluid py-20 pe-12 order-2 order-lg-1'>
             <Back />
             <div className="pt-6 pb-12">
                 <Logo />
@@ -19,10 +19,9 @@ const OnboardingProduct: FC = () => {
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
             </div>
 
-            <div className='fw-bold fs-2x text-gray-600 my-8 d-flex gap-2 align-items-center'>
-                <span>$</span>
-                <span className='fs-4x text-primary'>24</span>
-                <span>/ month</span>
+            <div className='fw-bold my-8 d-flex gap-2 align-items-end'>
+                <span className='display-4'>$24</span>
+                <span className='fs-6 text-gray-500 mb-1'>/ month</span>
             </div>
         </div>
     )

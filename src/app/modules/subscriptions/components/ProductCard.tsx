@@ -52,7 +52,7 @@ const ProductCard: FC = (props) => {
                                 <ul className='ps-4'>
                                     {
                                         feature_list.split('|').map((feature, index) => (
-                                            <li className='pb-3' key={`feature_${index}`}>
+                                            <li className='pb-1' key={`feature_${index}`}>
                                                 <ShowMoreLessText width={900}>
                                                     {feature}
                                                 </ShowMoreLessText>
