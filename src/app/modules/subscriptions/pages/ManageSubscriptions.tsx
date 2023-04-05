@@ -13,7 +13,7 @@ const ManageSubscriptions: FC = () => {
     <div className={clsx('app-default')}>
       <Header />
 
-      <div className="app-container">
+      <div className="container">
         <div className='manage-subscriptions mt-8'>
           <div className={clsx('app-toolbar flex-column')}>
             <div className="py-lg-6">

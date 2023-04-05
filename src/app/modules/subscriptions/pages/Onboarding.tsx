@@ -8,7 +8,13 @@ const Onboarding = () => {
     setTimeout(() => {
       window.scrollTo(0, 0)
     }, 10);
-  }, []);
+
+    document.body.classList.add('bg-two-color');
+  
+    return () => {
+      document.body.classList.remove('bg-two-color');
+    }
+  }, [])
 
   return (
     <div className='container'>
