@@ -4,7 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import { toAbsoluteUrl } from '../helpers/_utils';
 
 const Back: FC = () => {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const themeMode = localStorage.getItem('data-bs-theme') || 'light';
+    const imageUrl = (themeMode === 'light') ? '/media/subscriptions/back_arrow-black.png' : '/media/subscriptions/back_arrow-white.png';
 
     return (
         <button
@@ -14,8 +16,7 @@ const Back: FC = () => {
         >
             <img
                 alt='Logo'
-                src={toAbsoluteUrl('/media/subscriptions/back_arrow.png')}
-                className='h-30px'
+                src={toAbsoluteUrl(imageUrl)}
             />
         </button>
     )

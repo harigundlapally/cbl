@@ -8,12 +8,26 @@ const Onboarding = () => {
     setTimeout(() => {
       window.scrollTo(0, 0)
     }, 10);
-  },[]);
+
+    document.body.classList.add('bg-two-color');
   
+    return () => {
+      document.body.classList.remove('bg-two-color');
+    }
+  }, [])
+
   return (
-    <div className='d-flex flex-column flex-lg-row flex-column-fluid min-vh-100'>
-      <OnboardingProduct />
-      <OnboardingForm />
+    <div className='container'>
+      <div className="row">
+        <div className="col-md-6">
+
+          <OnboardingProduct />
+        </div>
+        <div className="col-md-6">
+          <OnboardingForm />
+
+        </div>
+      </div>
     </div>
   )
 }

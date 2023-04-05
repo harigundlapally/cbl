@@ -2,15 +2,14 @@ import React, {FC} from 'react'
 import { NavLink } from 'react-router-dom'
 import Logo from './Logo'
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import ThemeMode from './ThemeMode';
 
 const Header:FC = () => {
     return (
-        <div className='app-header mb-6 flex-column'>
+        <div className='app-header mb-6 align-items-center justify-content-center'>
             <div className="container">
                 <div className="d-flex align-items-center justify-content-between">
-                    <div className="pt-2 ps-2">
-                        <Logo />
-                    </div>
+                    <Logo />
                     <div className='d-flex flex-row align-items-center gap-6'>
                         <NavLink to='/manage-subscriptions' className={(navData) => (navData.isActive ? 'text-primary' : 'text-dark')}>
                             Manage Plans
@@ -25,6 +24,9 @@ const Header:FC = () => {
                         <NavLink to='/payment-success' className={'text-gray-400'}>
                             Payment Success
                         </NavLink>
+                        <div className="app-navbar-item position-relative">
+                            <ThemeMode />
+                        </div>
                     </div>
                 </div>
             </div>

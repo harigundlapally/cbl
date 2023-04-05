@@ -60,7 +60,7 @@ const OnboardingForm: FC = () => {
     })
 
     return (
-        <div className='d-flex flex-lg-row-fluid w-lg-50 bgi-size-cover bgi-position-center order-1 order-lg-2 onboarding-form bg-white p-20'>
+        <div className='d-flex flex-lg-row-fluid bgi-size-cover bgi-position-center order-1 order-lg-2 onboarding-form py-20 ps-12'>
             <form
                 className='form w-100'
                 onSubmit={formik.handleSubmit}

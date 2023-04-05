@@ -1,3 +1,15 @@
+:root {
+    --theme-blue: #00A3F1;
+    --theme-green: #83c907;
+    --theme-pink: #E363B0;
+    --bg-divider-light-1: #f5f8fa;
+    --bg-divider-light-2: #ffffff;
+}
+
+html {
+    font-size: 15px;
+}
+
 @font-face {
     font-family: 'AllianceLight';
     src: url('./core/components/fonts/alliance-no-1-light.otf');
@@ -14,18 +26,6 @@
     font-family: 'AllianceBold';
     src: url('./core/components/fonts/alliance-no-1-bold.otf');
     font-weight: light;
-}
-
-:root {
-    --theme-blue: #00A3F1;
-    --theme-green: #83c907;
-    --theme-pink: #E363B0;
-    --bg-divider-1: #f5f8fa;
-    --bg-divider-2: #ffffff;
-}
-
-html {
-    font-size: 15px;
 }
 
 h1,
@@ -47,6 +47,10 @@ li,
 .fw-normal {
     font-family: 'AllianceLight', sans-serif !important;
     line-height: 28px;
+}
+
+.fw-medium {
+    font-family: 'AllianceSemiBold', sans-serif !important;
 }
 
 .heading {
@@ -97,17 +101,46 @@ li,
     }
 }
 
-.pricing-bg-light {
-    background: rgb(245,248,250);
-    background: linear-gradient(180deg, rgba(245,248,250,1) 0%, rgba(245,248,250,0.5) 60%, rgba(255,255,255,1) 100%);
-}
-
 .bg-two-color {
     background: linear-gradient(
     to right,
-    var(--bg-divider-1) 0%,
-    var(--bg-divider-1) 50%,
-    var(--bg-divider-2) 50%,
-    var(--bg-divider-2) 100%
+    var(--bg-divider-light-1) 0%,
+    var(--bg-divider-light-1) 50%,
+    var(--bg-divider-light-2) 50%,
+    var(--bg-divider-light-2) 100%
   );
+}
+
+[data-bs-theme='dark'] .bg-two-color {
+    background: linear-gradient(
+    to right,
+    var(--bs-app-header-base-bg-color) 0%,
+    var(--bs-app-header-base-bg-color) 50%,
+    var(--bs-light) 50%,
+    var(--bs-light) 100%
+  );
+}
+
+.plan-tile {
+    position: relative;
+    height: 100%;
+
+    .plan-features-expandable {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .plan-features {
+            flex-grow: 1;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-bottom: 4rem;
+        }
+    }
+
+    .plan-btn {
+        position: absolute;
+        bottom: 2rem;
+        width: calc(100% - 3rem);
+    }
 }

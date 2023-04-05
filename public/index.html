@@ -19,18 +19,10 @@
     <!--begin::Theme mode setup on page load-->
     <script>
       if (document.documentElement) {
-        var defaultThemeMode = 'system'
-
-        var themeMode = localStorage.getItem('kt_theme_mode_value')
-        if (!themeMode) {
-          if (defaultThemeMode === 'system') {
-            themeMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-          } else {
-            themeMode = defaultThemeMode
-          }
-        }
-
-        document.documentElement.setAttribute('data-bs-theme', themeMode)
+        var defaultThemeMode = 'dark';
+        var themeMode = localStorage.getItem('data-bs-theme');
+        document.documentElement.setAttribute('data-bs-theme', themeMode || defaultThemeMode);
+        localStorage.setItem('data-bs-theme', themeMode || defaultThemeMode);
       }
     </script>
     <!--end::Theme mode setup on page load-->

@@ -72,8 +72,7 @@ const Plans: FC = () => {
               </h1>
             </div>
 
-            <div className="card">
-              <div className="card-body">
+            <>
                 {/* begin::Plan tabs*/}
                 <div className="d-flex align-items-center justify-content-center py-lg-1">
                   <div className='nav-group nav-group-outline mx-auto' data-kt-buttons='true'>
@@ -101,35 +100,61 @@ const Plans: FC = () => {
 
                 {/* begin::Plan subscriptions*/}
                 <div className='tab-content rounded h-100 py-6'>
-                  <div className="row g-6 g-xl-4 align-items-start justify-content-center">
+                  <div className="row g-6 g-xl-4 justify-content-center">
                     {
                       tempSubscriptions.map((plan, index) => {
                         return (
-                          <div key={`custom${index}`} className={clsx(tempSubscriptions.length > 3 ? 'col-lg-3' : 'col-lg-3')}>
-                            <div className='pricing-bg-light rounded-4 card-body plan-tile px-6 py-8'>
+                          <div key={`custom${index}`} className={'col-md-3'}>
                               <div
-                                className={`text-start tab-pane fade` + (plan)}
+                                className={`plan-tile bg-light rounded-4 px-6 py-8 tab-pane`}
                                 id={`kt_upgrade_plan_${index}`}
                                 key={index}
                               >
-                                <div className='pb-3'>
-                                  <h2 className='fw-bolder text-dark'>
-                                    {plan.title}
-                                    {/* {plan.label && (
-                                          <span className='badge badge-light-success ms-2 fs-8'>
-                                            {plan.label}
-                                          </span>
-                                        )}   */}
-                                  </h2>
-                                  <div className='fw-normal fs-8'>{plan.description}</div>
-                                </div>
+                                <h2 className='fw-normal text-dark'>
+                                  {plan.title}
+                                  {/* 
+                                      {plan.label && (
+                                        <span className='badge badge-light-success ms-2 fs-8'>
+                                          {plan.label}
+                                        </span>
+                                      )}   
+                                  */}
+                                </h2>
 
                                 <div className='my-4 d-flex gap-2 align-items-end justify-content-start'>
-                                  <span className='display-6'>${plan.unit_amount.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}</span>
+                                  <h3 className='display-6 mb-0'>${plan.unit_amount.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}</h3>
                                   <span className='fs-8 text-gray-500'>/ {plan.recurring ? plan.recurring.interval : 'One time'}</span>
                                 </div>
 
-                                <div className='d-grid mb-8'>
+                                <div className='fw-normal fs-8'>{plan.description}</div>
+
+                                <hr style={{borderTop: "dotted 3px", padding: "10px 0"}} />
+
+                                <div className='pt-1 plan-features-expandable'>
+                                  <div className="plan-features">
+                                    {plan.feature_list.split('|').map((feature, i) => {
+                                      return (
+                                        <div
+                                          className='mb-2'
+                                          key={`${i}-${feature}`}
+                                        >
+                                          <span className='d-flex flex-grow-1 align-items-start'>
+                                              <img
+                                                  src={toAbsoluteUrl('/media/subscriptions/gen040.svg')}
+                                                  className='h-15px me-2 mt-2'
+                                                  alt='check icon'
+                                                />
+                                              <span className='fs-8 fw-normal'>
+                                                {feature}
+                                              </span>
+                                          </span>
+                                        </div>
+                                      )
+                                    })}
+                                  </div>
+                                </div>
+
+                                <div className='plan-btn d-grid'>
                                   <button
                                     className='btn btn-theme btn-sm'
                                     type='button' onClick={() => {
@@ -138,36 +163,8 @@ const Plans: FC = () => {
                                     {intl.formatMessage({ 'id': 'SUBSCRIPTIONS.PLANS.PURCHASE_PLAN_BTN' })}
                                   </button>
                                 </div>
-
-                                <hr style={{borderTop: "dotted 3px", padding: "10px 0"}} />
-
-                                <div className='pt-1'>
-                                  {plan.feature_list.split('|').map((feature, i) => {
-                                    return (
-                                      <div
-                                        className={
-                                          `d-flex align-items-center` +
-                                          (i !== plan.feature_list.split('|')!.length - 1 && ' mb-4')
-                                        }
-                                        key={`${i}-${feature}`}
-                                      >
-                                        <span className='d-flex flex-grow-1 align-items-start'>
-                                            <img
-                                                src={toAbsoluteUrl('/media/subscriptions/gen040.svg')}
-                                                className='h-15px me-2 mt-1'
-                                                alt='check icon'
-                                              />
-                                            <span className='fs-8 fw-normal'>
-                                              {feature}
-                                            </span>
-                                        </span>
-                                      </div>
-                                    )
-                                  })}
-
-                                </div>
+                                
                               </div>
-                            </div>
                           </div>
                         )
                       })
@@ -176,8 +173,7 @@ const Plans: FC = () => {
                 </div>
                 {/* end::Plan subscriptions*/}
 
-              </div>
-            </div>
+            </>
 
           </div>
         </div>
