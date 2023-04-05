@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'AllianceLight';
+    src: url('./core/components/fonts/alliance-no-1-light.otf');
+    font-weight: light;
+}
+
+@font-face {
+    font-family: 'AllianceSemibold';
+    src: url('./core/components/fonts/alliance-no-1-semi-bold.otf');
+    font-weight: light;
+}
+
+@font-face {
+    font-family: 'AllianceBold';
+    src: url('./core/components/fonts/alliance-no-1-bold.otf');
+    font-weight: light;
+}
+
+:root {
+    --theme-blue: #00A3F1;
+    --theme-green: #83c907;
+    --theme-pink: #E363B0;
+    --bg-divider-1: #f5f8fa;
+    --bg-divider-2: #ffffff;
+}
+
+html {
+    font-size: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+a,
+button {
+    font-family: 'AllianceBold', sans-serif !important;
+}
+
+div,
+span,
+p,
+li,
+.fw-normal {
+    font-family: 'AllianceLight', sans-serif !important;
+    line-height: 28px;
+}
+
+.heading {
+    font-size: 42px;
+    text-transform: uppercase;
+}
+
+.theme-heading {
+        background-color: transparent;
+        background-image: linear-gradient(90deg, var(--theme-green), var(--theme-blue), var(--theme-pink));
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        display: inline;
+}
+
+.sub-heading {
+    font-size: 15px;
+}
+
+.btn.btn-theme {
+    @include button-custom-variant(
+      $color: $white,
+      $icon-color: null,
+      $border-color: var(--theme-blue) !important,
+      $bg-color: var(--theme-green) !important,
+      $color-active: $white,
+      $icon-color-active: null,
+      $border-color-active: var(--theme-blue),
+      $bg-color-active: var(--theme-blue)
+    );
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &:hover {
+        @include button-custom-variant(
+            $color: $white,
+            $icon-color: null,
+            $border-color: var(--theme-blue) !important,
+            $bg-color: var(--theme-green) !important,
+            $color-active: $white,
+            $icon-color-active: null,
+            $border-color-active: var(--theme-blue),
+            $bg-color-active: var(--theme-blue)
+          ); 
+    }
+}
+
+.pricing-bg-light {
+    background: rgb(245,248,250);
+    background: linear-gradient(180deg, rgba(245,248,250,1) 0%, rgba(245,248,250,0.5) 60%, rgba(255,255,255,1) 100%);
+}
+
+.bg-two-color {
+    background: linear-gradient(
+    to right,
+    var(--bg-divider-1) 0%,
+    var(--bg-divider-1) 50%,
+    var(--bg-divider-2) 50%,
+    var(--bg-divider-2) 100%
+  );
+}

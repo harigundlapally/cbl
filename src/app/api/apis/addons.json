@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Addon 2",
+        "description": "PCI-DSS SAQ for merchants using POS terminals provided by the bank or fully outsourced to other PCI DSS compliant payment aggregators.",
+        "imagePath": "https://files.stripe.com/links/MDB8YWNjdF8xTWJHeWpTRUpTOVNOQllOfGZsX3Rlc3RfVldoMms3WndwdXdjRHhhMXc0Z0ppWjNL00rH1LGWWZ",
+        "feature_list": "SAQ Portal Access | Filling up of the SAQ Document | Attestation by QSA | PCI SAQ Certificate",
+        "id": "prod_NbtUo952dNGFck",
+        "category": "All"
+    },
+    {
+        "name": "Addon 3",
+        "description": "PCI SAQ-D for merchants who have a requirement to store card numbers.",
+        "imagePath": "https://files.stripe.com/links/MDB8YWNjdF8xTWJHeWpTRUpTOVNOQllOfGZsX3Rlc3RfM3Bxa2ZnODlKWlp5MGhIWEpIMFhlUHlS00xyggY6aG",
+        "feature_list": "SAQ Portal Access for evidence upload | Filling up of the SAQ Document | Attestation by QSA | PCI SAQ Certificate | QSA Consulting - 2 Hours",
+        "id": "prod_Nbtrt2jsNF9hup",
+        "category": "All"
+    }
+]
