@@ -60,7 +60,7 @@ const OnboardingForm: FC = () => {
     })
 
     return (
-        <div className='d-flex flex-lg-row-fluid w-lg-50 bgi-size-cover bgi-position-center order-1 order-lg-2 onboarding-form bg-white p-20'>
+        <div className='d-flex flex-lg-row-fluid bgi-size-cover bgi-position-center order-1 order-lg-2 onboarding-form bg-white p-20'>
             <form
                 className='form w-100'
                 onSubmit={formik.handleSubmit}
@@ -70,14 +70,14 @@ const OnboardingForm: FC = () => {
                 {/* begin::Heading */}
                 <div className='text-center mb-11'>
                     <h1 className='text-dark mb-3 text-uppercase theme-heading'>{intl.formatMessage({'id': 'SUBSCRIPTIONS.ONBOARDING.FORM_TITLE'})}</h1>
-                    {/* <div className='text-gray-500 fw-semibold fs-6'>Your Social Campaigns</div> */}
+                    {/* <div className='text-gray-500 fw-semibold'>Your Social Campaigns</div> */}
                 </div>
                 {/* begin::Heading */}
 
 
                 {/* begin::Form group */}
                 <div className='fv-row mb-5'>
-                    <label className='form-label fs-5 text-dark'>Email ID</label>
+                    <label className='form-label text-dark'>Email ID</label>
                     <input
                         placeholder='Email'
                         {...formik.getFieldProps('email')}
@@ -102,7 +102,7 @@ const OnboardingForm: FC = () => {
 
                 {/* begin::Form group */}
                 <div className='fv-row mb-5'>
-                    <label className='form-label text-dark fs-5 mb-0'>Name</label>
+                    <label className='form-label text-dark mb-0'>Name</label>
                     <input
                         type='text'
                         autoComplete='off'
@@ -129,7 +129,7 @@ const OnboardingForm: FC = () => {
 
                 {/* begin::Form group */}
                 <div className='fv-row mb-5'>
-                    <label className='form-label text-dark fs-5 mb-0'>Designation</label>
+                    <label className='form-label text-dark mb-0'>Designation</label>
                     <input
                         type='text'
                         autoComplete='off'
@@ -156,7 +156,7 @@ const OnboardingForm: FC = () => {
 
                 {/* begin::Form group */}
                 <div className='fv-row mb-5'>
-                    <label className='form-label text-dark fs-5 mb-0'>Company Name</label>
+                    <label className='form-label text-dark mb-0'>Company Name</label>
                     <input
                         type='text'
                         autoComplete='off'
@@ -183,7 +183,7 @@ const OnboardingForm: FC = () => {
 
                 {/* begin::Form group */}
                 <div className='fv-row mb-5'>
-                    <label className='form-label text-dark fs-5 mb-0'>Company Type</label>
+                    <label className='form-label text-dark mb-0'>Company Type</label>
                     <select
                         {...formik.getFieldProps('companyType')}
                         className={clsx(
